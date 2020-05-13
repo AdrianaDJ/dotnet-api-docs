@@ -5,14 +5,10 @@
       "build_source_folder": ".",
       "build_output_subfolder": ".",
       "locale": "en-us",
+      "xref_query_tags": ["/uwp/api"],
       "monikers": [],
       "moniker_ranges": [],
-      "xref_query_tags": [
-        "/uwp/api"
-      ],
-      "filemap_share_depots": [
-        "VS.core-docs"
-      ],
+      "filemap_share_depots": ["VS.core-docs"],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
@@ -26,6 +22,8 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
+      "base_path": "dotnet",
+      "site_name": "Docs",
       "customized_tasks": {
         "docset_prebuild": [
           "_dependentPackages/ECMA2Yaml/tools/Run.ps1",
@@ -52,8 +50,6 @@
     }
   ],
   "notification_subscribers": [],
-  "sync_notification_subscribers": [],
-  "branches_to_filter": [],
   "git_repository_branch_open_to_public_contributors": "master",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
@@ -67,12 +63,19 @@
       "branch_mapping": {}
     }
   ],
-  "branch_target_mapping": {},
+  "branch_target_mapping": {
+    "live": [
+      "Publish"
+    ],
+    "master": [
+      "Publish"
+    ],
+    "intellisense": [
+      "Intellisense"
+    ]
+  },
   "need_generate_pdf_url_template": false,
   "targets": {},
-  "docs_build_engine": {
-    "name": "docfx_v3"
-  },
   "dependent_packages": [
     {
       "id": "Microsoft.DocAsCode.ECMA2Yaml",
